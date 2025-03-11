@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,18 +8,75 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
   <style>
     body {
-      margin-top: 75px;
+      margin-top: 45px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
+
     .navbar-custom {
       background-color: #28a73b;
+      padding: 2px 6px;
     }
-    .navbar-custom .nav-link {
-      color: white;
+
+    .navbar-nav {
+      margin-left: 0px;
+    }
+
+    .navbar-brand {
+      margin-right: 20px;
+    }
+
+    .navbar .navbar-nav .nav-link {
+      font-size: 18px;
+      padding: 4px 7px;
       font-weight: bold;
+      color: white;
     }
+
+    .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.1);
+      padding: 5px 7px;
+    }
+
+    .navbar-toggler-icon {
+      background-color: white;
+      height: 20px;
+      width: 30px;
+    }
+
     .form-section {
-      margin-top: 30px;
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      background-color: #fff;
+      flex: 1; /* Ensures form section takes up available space */
     }
+
+    .btn {
+      font-size: 1.5rem;
+      padding: 15px 30px;
+      margin: 20px 0;
+    }
+
+    .form-label {
+      font-size: 1.2rem;
+    }
+
+    .form-control {
+      font-size: 1.2rem;
+      padding: 10px;
+    }
+
+    footer {
+      background-color: #28a73b;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+
   </style>
 </head>
 <body>
@@ -59,75 +116,80 @@
     </div>
   </nav>
 
-  <!-- Registration Section -->
-  <div class="container form-section">
-    <h1 class="text-center">Register</h1>
-    <ul class="nav nav-tabs" id="registrationTabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="resident-tab" data-bs-toggle="tab" data-bs-target="#resident" type="button" role="tab" aria-controls="resident" aria-selected="true">Resident</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="business-tab" data-bs-toggle="tab" data-bs-target="#business" type="button" role="tab" aria-controls="business" aria-selected="false">Business</button>
-      </li>
-    </ul>
-    <div class="tab-content mt-3" id="registrationTabsContent">
-      <!-- Resident Registration -->
-      <div class="tab-pane fade show active" id="resident" role="tabpanel" aria-labelledby="resident-tab">
-        <form action="#" method="POST">
-          <div class="mb-3">
-            <label for="residentName" class="form-label">Name</label>
-            <input type="text" class="form-control" id="residentName" name="residentName" required>
-          </div>
-          <div class="mb-3">
-            <label for="residentEmail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="residentEmail" name="residentEmail" required>
-          </div>
-          <div class="mb-3">
-            <label for="residentPassword" class="form-label">Password</label>
-            <input type="password" class="form-control" id="residentPassword" name="residentPassword" required>
-          </div>
-          <div class="mb-3">
-            <label for="residentArea" class="form-label">Area</label>
-            <input type="text" class="form-control" id="residentArea" name="residentArea" required>
-          </div>
-          <div class="mb-3">
-            <label for="residentDob" class="form-label">Date of Birth</label>
-            <input type="date" class="form-control" id="residentDob" name="residentDob" required>
-          </div>
-          <button type="submit" class="btn btn-success">Register as Resident</button>
-        </form>
-      </div>
+  <!-- Registration Form -->
+  <div class="form-section">
+    <h2 class="text-center mb-4">Register</h2>
+    <div class="text-center">
+      <button class="btn btn-success w-100 mb-3" onclick="showForm('Resident')">Register as Resident</button>
+      <button class="btn btn-success w-100 mb-3" onclick="showForm('Business')">Register as Business</button>
+    </div>
 
-      <!-- Business Registration -->
-      <div class="tab-pane fade" id="business" role="tabpanel" aria-labelledby="business-tab">
-        <form action="#" method="POST">
-          <div class="mb-3">
-            <label for="businessName" class="form-label">Business Name</label>
-            <input type="text" class="form-control" id="businessName" name="businessName" required>
-          </div>
-          <div class="mb-3">
-            <label for="businessProducts" class="form-label">Products</label>
-            <input type="text" class="form-control" id="businessProducts" name="businessProducts" required>
-          </div>
-          <div class="mb-3">
-            <label for="businessEmail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="businessEmail" name="businessEmail" required>
-          </div>
-          <div class="mb-3">
-            <label for="businessPassword" class="form-label">Password</label>
-            <input type="password" class="form-control" id="businessPassword" name="businessPassword" required>
-          </div>
-          <button type="submit" class="btn btn-success">Register as Business</button>
-        </form>
-      </div>
+    <!-- Resident Registration Form (Initially Hidden) -->
+    <div id="residentForm" style="display: none; margin-top: 20px;">
+      <h5 class="text-center mb-3">Resident Registration</h5>
+      <form>
+        <div class="mb-3">
+          <label for="residentName" class="form-label">Name</label>
+          <input type="text" class="form-control" id="residentName" placeholder="Enter your name">
+        </div>
+        <div class="mb-3">
+          <label for="residentEmail" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="residentEmail" placeholder="Enter your email">
+        </div>
+        <div class="mb-3">
+          <label for="residentPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="residentPassword" placeholder="Enter your password">
+        </div>
+        <div class="mb-3">
+          <label for="residentArea" class="form-label">Area</label>
+          <input type="text" class="form-control" id="residentArea" placeholder="Enter your area">
+        </div>
+        <div class="mb-3">
+          <label for="residentDob" class="form-label">Date of Birth</label>
+          <input type="date" class="form-control" id="residentDob">
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Register</button>
+      </form>
+    </div>
+
+    <!-- Business Registration Form (Initially Hidden) -->
+    <div id="businessForm" style="display: none; margin-top: 20px;">
+      <h5 class="text-center mb-3">Business Registration</h5>
+      <form>
+        <div class="mb-3">
+          <label for="businessName" class="form-label">Business Name</label>
+          <input type="text" class="form-control" id="businessName" placeholder="Enter business name">
+        </div>
+        <div class="mb-3">
+          <label for="businessEmail" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="businessEmail" placeholder="Enter your email">
+        </div>
+        <div class="mb-3">
+          <label for="businessPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="businessPassword" placeholder="Enter your password">
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Register</button>
+      </form>
     </div>
   </div>
 
   <!-- Footer -->
-  <footer style="background-color: #28a73b;" class="text-white py-3 mt-5">
-    <div class="container text-center">
-      <p>&copy; 2025 Healthy Habitat Network. All Rights Reserved.</p>
+  <footer>
+    <div class="container">
+      <p>Healthy Habitat Network &copy; 2025</p>
     </div>
   </footer>
+
+  <script>
+    function showForm(role) {
+      if (role === 'Resident') {
+        document.getElementById('residentForm').style.display = 'block';
+        document.getElementById('businessForm').style.display = 'none';
+      } else {
+        document.getElementById('businessForm').style.display = 'block';
+        document.getElementById('residentForm').style.display = 'none';
+      }
+    }
+  </script>
 </body>
 </html>

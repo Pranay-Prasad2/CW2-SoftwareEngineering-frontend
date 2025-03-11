@@ -1,6 +1,6 @@
 ## Git Commands
 
- https://pranay-prasad2.github.io/CW2-SoftwareEngineering-frontend/
+Live server: https://pranay-prasad2.github.io/CW2-SoftwareEngineering-frontend/
 
 ### Initialize a Git repository
 ```sh

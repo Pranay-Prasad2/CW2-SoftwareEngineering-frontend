@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Healthy Habitat Network</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+  
+  <!-- Include Font Awesome for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin-top: 45px;
+    }
+    .navbar-brand img {
+      width: 30px; /* Adjusted size */
+      margin-right: 8px;
+    }
+    .navbar-custom {
+      background-color: #28a73b;
+      padding: 2px 6px;
+    }
+    .navbar-nav {
+      margin-left: 0px;
+    }
+
+    .navbar-brand {
+      margin-right: 20px;
+    }
+
+    .navbar .navbar-nav .nav-link {
+      font-size: 18px;
+      padding: 4px 7px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.1);
+      padding: 5px 7px;
+    }
+
+    .navbar-toggler-icon {
+      background-color: white;
+      height: 20px;
+      width: 30px;
+    }
+
+    .login-container {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      background-color: #fff;
+    }
+
+    .login-options button {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #28a73b;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 50px;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    footer ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    footer ul li a {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container-fluid">
+      <!-- Logo and Brand -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="Images/nutrition.png" alt="Logo"> Healthy Habitat
+      </a>
+      <!-- Toggler Button for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Left-Aligned Links -->
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Homepage</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html">Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="service.html">Service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <!-- Right-Aligned Links -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="account.html">
+              <img src="Images/Sample_User_Icon.png" alt="Account" style="width: 30px; height: auto;">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login Section -->
+  <div class="login-container">
+    <h2 class="text-center mb-4">Login</h2>
+    <p class="text-center">Select your role to log in:</p>
+    <div class="login-options text-center">
+      <button class="btn btn-success w-100 mb-3" onclick="showLoginForm('Admin')">Log in as Admin</button>
+      <button class="btn btn-success w-100 mb-3" onclick="showLoginForm('Resident')">Log in as Resident</button>
+      <button class="btn btn-success w-100" onclick="showLoginForm('Business')">Log in as Business</button>
+    </div>
+
+    <!-- Dynamic Login Form -->
+    <div id="loginForm" style="display:none; margin-top: 20px;">
+      <h5 id="loginRole" class="text-center mb-3"></h5>
+      <form>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Enter your password">
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Log In</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>Healthy Habitat Network &copy; 2025</p>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    function showLoginForm(role) {
+      document.getElementById('loginRole').innerText = `Log in as ${role}`;
+      document.getElementById('loginForm').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

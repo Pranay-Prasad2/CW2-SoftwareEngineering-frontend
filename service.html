@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Healthy Habitat</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>{
+    margin-top: 45px;
+      }
+      .navbar-brand img {
+        width: 30px; /* Adjusted size */
+        margin-right: 8px;
+      }
+      .navbar-custom {
+        background-color: #28a73b;
+        padding: 2px 6px;
+      }
+      .navbar-nav {
+        margin-left: 0px;
+      }
+  
+      .navbar-brand {
+        margin-right: 20px;
+      }
+  
+      .navbar .navbar-nav .nav-link {
+        font-size: 18px;
+        padding: 4px 7px;
+        font-weight: bold;
+        color: white;
+      }
+  
+      .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.1);
+        padding: 5px 7px;
+      }
+  
+      .navbar-toggler-icon {
+        background-color: white;
+        height: 20px;
+        width: 30px;
+      }
+    .service-card {
+      margin-bottom: 30px;
+      padding: 15px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .service-card:hover {
+      transform: scale(1.05);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .sort-options {
+      margin-bottom: 30px;
+    }
+
+    .read-more {
+      background-color: #007bff;
+      color: white;
+      padding: 5px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .read-more:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+     <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container-fluid">
+      <!-- Logo and Brand -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="Images/nutrition.png" alt="Logo"> Healthy Habitat
+      </a>
+      <!-- Toggler Button for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Left-Aligned Links -->
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Homepage</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html">Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="service.html">Service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <!-- Right-Aligned Links -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="account.html">
+              <img src="Images/Sample_User_Icon.png" alt="Account" style="width: 30px; height: auto;">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="container py-5">
+    <h2>Our Services</h2>
+    <p>Discover a range of services to promote well-being and sustainability.</p>
+
+    <!-- Filters Section -->
+    <div class="row sort-options">
+      <div class="col-md-6">
+        <label for="sort-rating">Sort by Top Rating:</label>
+        <select id="sort-rating" class="form-select">
+          <option value="high-to-low">High to Low</option>
+          <option value="low-to-high">Low to High</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="row">
+      <!-- Service 1 -->
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="Images/service1.jpg" alt="Service 1">
+          <h3>Service 1</h3>
+          <p>Description of Service 1.</p>
+          <p><strong>Rating: 4.5/5</strong></p>
+          <a href="service-details.html" class="read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="Images/service1.jpg" alt="Service 2">
+          <h3>Service 2</h3>
+          <p>Description of Service 2.</p>
+          <p><strong>Rating: 3.8/5</strong></p>
+          <a href="service-details.html" class="read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="Images/service1.jpg" alt="Service 3">
+          <h3>Service 3</h3>
+          <p>Description of Service 3.</p>
+          <p><strong>Rating: 4.9/5</strong></p>
+          <a href="service-details.html" class="read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="Images/service1.jpg" alt="Service 4">
+          <h3>Service 4</h3>
+          <p>Description of Service 4.</p>
+          <p><strong>Rating: 4.2/5</strong></p>
+          <a href="service-details.html" class="read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="Images/service1.jpg" alt="Service 5">
+          <h3>Service 5</h3>
+          <p>Description of Service 5.</p>
+          <p><strong>Rating: 4.7/5</strong></p>
+          <a href="service-details.html" class="read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="Images/service1.jpg" alt="Service 6">
+          <h3>Service 6</h3>
+          <p>Description of Service 6.</p>
+          <p><strong>Rating: 3.9/5</strong></p>
+          <a href="service-details.html" class="read-more">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Event listeners for sorting filters
+    document.getElementById('sort-rating').addEventListener('change', function() {
+      const value = this.value;
+      console.log('Sorted by rating:', value);
+      // Implement sorting functionality here
+    });
+  </script>
+</body>
+</html>
+

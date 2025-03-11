@@ -1,9 +1,12 @@
-commands 
+## Git Commands
 
+### Initialize a Git repository
+```sh
 git init
 git add .
-git commit -m "massage to display"
+git commit -m "message to display"
 git push origin master
-
-pull commands 
+```
+### Pull Repository before editing code
+```sh
 git pull origin master

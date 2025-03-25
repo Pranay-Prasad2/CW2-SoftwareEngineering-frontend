@@ -13,7 +13,7 @@
   <style>
     /* Basic styles */
     body {
-      margin-top: 45px;
+      margin-top: 70px;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -66,7 +66,11 @@
     }
 
     .login-options button {
+      font-size: 1.5rem;
+      padding: 15px 30px;
       margin-bottom: 10px;
+      width: 100%;
+      font-weight: bold;
     }
 
     footer {
@@ -146,16 +150,17 @@
     <div class="login-options text-center">
       <button class="btn btn-success w-100 mb-3" onclick="showLoginForm('Admin')">Log in as Admin</button>
       <button class="btn btn-success w-100 mb-3" onclick="showLoginForm('Resident')">Log in as Resident</button>
-      <button class="btn btn-success w-100" onclick="showLoginForm('Business')">Log in as Business</button>
+      <button class="btn btn-success w-100 mb-3" onclick="showLoginForm('Business')">Log in as Business</button>
     </div>
 
     <!-- Dynamic Login Form -->
     <div id="loginForm" style="display:none; margin-top: 20px;">
       <h5 id="loginRole" class="text-center mb-3"></h5>
-      <form>
+      <form id="loginFormElement">
         <div class="mb-3">
           <label for="email" class="form-label">Email address</label>
           <input type="email" class="form-control" id="email" placeholder="Enter your email">
+          <div id="emailError" class="text-danger mt-1" style="display: none;">Please enter a valid email address.</div>
         </div>
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
@@ -174,15 +179,25 @@
   </footer>
 
   <script>
-    function showForm(role) {
-      if (role === 'Resident') {
-        document.getElementById('residentForm').style.display = 'block';
-        document.getElementById('businessForm').style.display = 'none';
-      } else {
-        document.getElementById('businessForm').style.display = 'block';
-        document.getElementById('residentForm').style.display = 'none';
-      }
+    function showLoginForm(role) {
+      document.getElementById('loginRole').textContent = `Log in as ${role}`;
+      document.getElementById('loginForm').style.display = 'block';
     }
+
+    document.getElementById('loginFormElement').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      const emailError = document.getElementById('emailError');
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailRegex.test(email)) {
+        emailError.style.display = 'block';
+      } else {
+        emailError.style.display = 'none';
+        alert('Form submitted successfully!');
+        // You can add form submission logic here
+      }
+    });
   </script>
 </body>
 </html>

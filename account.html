@@ -16,17 +16,17 @@
       margin-top: 45px;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
+      min-height: 100vh; /* Ensure the body takes the full height of the page */
     }
 
     .navbar-brand img {
-      width: 30px; /* Adjusted size */
+      width: 70px; /* Adjusted size */
       margin-right: 8px;
     }
 
     .navbar-custom {
       background-color: #28a73b;
-      padding: 2px 6px;
+      padding: 8px 6px;
     }
 
     .navbar-nav {
@@ -38,7 +38,7 @@
     }
 
     .navbar .navbar-nav .nav-link {
-      font-size: 18px;
+      font-size: 20px;
       padding: 4px 7px;
       font-weight: bold;
       color: white;
@@ -62,13 +62,14 @@
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
       background-color: #fff;
-      flex: 1; /* Ensures form section takes up available space */
+      flex: 1; /* Makes the form section take the available space */
     }
 
     .btn {
       font-size: 1.5rem;
       padding: 15px 30px;
       margin: 20px 0;
+      font-weight: bold; /* Added bold text style */
     }
 
     .form-label {
@@ -85,8 +86,8 @@
       color: white;
       text-align: center;
       padding: 15px 0;
+      margin-top: auto; /* Ensures footer is pushed to the bottom */
     }
-
   </style>
 </head>
 <body>

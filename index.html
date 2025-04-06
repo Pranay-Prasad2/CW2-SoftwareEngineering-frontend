@@ -2,158 +2,155 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Healthy Habitat Network</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+
   
-  <!-- Include Font Awesome for icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 
   <style>
-    body {
-      margin-top: 45px;
-    }
+    
     .navbar-brand img {
-      width: 70px; /* Adjusted size */
+      width: 30px;
       margin-right: 8px;
     }
     .navbar-custom {
       background-color: #28a73b;
-      padding: 8px 6px;
     }
-    .navbar-nav {
-      margin-left: 0px;
-    }
-
-    .navbar-brand {
-      margin-right: 20px;
-    }
-
-    .navbar .navbar-nav .nav-link {
-      font-size: 20px;
-      padding: 4px 7px;
+    .navbar .nav-link {
+      font-size: 18px;
       font-weight: bold;
       color: white;
     }
-
-    .navbar-toggler {
-      border-color: rgba(255, 255, 255, 0.1);
-      padding: 5px 7px;
+    .navbar .nav-link:hover {
+      color: #d4ffd7;
     }
 
-    .navbar-toggler-icon {
+    body {
+      margin-top: 60px; /* To avoid overlap with fixed navbar */
+      background-color: #fefefe;
+    }
+
+    /* MAIN SLIDER */
+    .carousel-item img {
+      width: 100%;
+      height: 80vh;
+      object-fit: cover;
+    }
+
+    /* PRODUCT & SERVICE CARDS */
+    .item-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
       background-color: white;
-      height: 20px;
-      width: 30px;
-    }
-
-    .slider-container {
-      width: 100%;
-      max-width: 1000px;
-      margin: 0 auto;
-      overflow: hidden;
-    }
-
-    .slider {
-      display: flex;
-      transition: transform 1s ease;
-    }
-
-    .slide {
-      width: 100%;
-      display: none;
-    }
-
-    .slide.active {
-      display: block;
-    }
-
-    .product-section, .service-section {
-      margin-top: 50px;
-    }
-
-    .product-card, .service-card {
-      padding: 20px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
       text-align: center;
-      transition: transform 0.3s;
+      transition: transform 0.3s ease;
     }
-
-    .product-card:hover, .service-card:hover {
-      transform: scale(1.05);
+    .item-card:hover {
+      transform: scale(1.03);
     }
-
-    .product-card img, .service-card img {
+    .item-card img {
       width: 100%;
-      height: auto;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
     }
 
-    .add-to-cart, .view-more {
-      display: block;
-      margin-top: 10px;
-      color: #007BFF;
-      text-decoration: none;
-    }
-
-    .add-to-cart {
-      background-color: #28a745;
-      color: white;
-      padding: 10px;
+  
+    .vote-button {
+      font-size: 24px;
+      color: #ccc;
+      background: none;
       border: none;
       cursor: pointer;
     }
-
-    .view-more:hover, .add-to-cart:hover {
-      text-decoration: underline;
+    .vote-button.loved {
+      color: #dc3545;
     }
 
-    img {
-      width: 100%;
-      height: auto;
+    
+    .about-us {
+      background-color: #f8f9fa;
+      padding: 60px 0;
+    }
+    .about-us h2 {
+      color: #28a73b;
+      font-weight: bold;
+    }
+    .about-us p {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.6;
+    }
+    .about-us img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    
+    .social-media {
+      background-color: #333;
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+    .social-icons a {
+      font-size: 1.5rem;
+      color: white;
+      margin: 0 15px;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #28a73b;
+    }
+
+    
+    .view-more-btn {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    
+    footer {
+      background-color: #28a73b;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
     }
   </style>
 </head>
+
 <body>
-  <!-- Navbar -->
+
+
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
     <div class="container-fluid">
-      <!-- Logo and Brand -->
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="Images/nutrition.png" alt="Logo"> Healthy Habitat
+        <img src="Images/nutrition.png" alt="Healthy Habitat Logo"> Healthy Habitat
       </a>
-      <!-- Toggler Button for Mobile -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- Navbar Links -->
+
       <div class="collapse navbar-collapse" id="navbarNav">
-        <!-- Left-Aligned Links -->
         <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Homepage</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="product.html">Product</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="service.html">Service</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Homepage</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
-        <!-- Right-Aligned Links -->
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="cart.html">Cart</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
           <li class="nav-item">
             <a class="nav-link" href="account.html">
-              <img src="Images/Sample_User_Icon.png" alt="Account" style="width: 30px; height: auto;">
+              <img src="Images/Sample_User_Icon.png" alt="Account" width="30">
             </a>
           </li>
         </ul>
@@ -161,114 +158,132 @@
     </div>
   </nav>
 
-  <!-- Homepage -->
-  <section id="home" class="container py-5">
-    <h1>Welcome to Healthy Habitat</h1>
-    <p>Your journey to sustainable and healthy living starts here!</p>
-  </section>
-
-  <!-- Slider -->
-  <section class="container py-5">
-    <h2 class="text-center">Popular Eco-Friendly Choices</h2>
-    <div class="slider-container">
-      <div class="slider">
-        <div class="slide active">
-          <img src="Images/slider1.jpeg" alt="Product 1">
-          <h3>Eco-Friendly Product 1</h3>
-          <p>Details of Product 1, made with sustainable materials.</p>
-          <a href="product_page.html" class="view-more">View More</a>
-        </div>
-        <div class="slide">
-          <img src="Images/slider2.jpg" alt="Product 2">
-          <h3>Eco-Friendly Product 2</h3>
-          <p>Details of Product 2, crafted for a greener tomorrow.</p>
-          <a href="product_page.html" class="view-more">View More</a>
-        </div>
-        <div class="slide">
-          <img src="Images/nutrition.png" alt="Product 3">
-          <h3>Eco-Friendly Product 3</h3>
-          <p>Details of Product 3, designed with the planet in mind.</p>
-          <a href="product_page.html" class="view-more">View More</a>
-        </div>
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Images/feature.jpg" alt="Nature Image 1">
+      </div>
+      <div class="carousel-item">
+        <img src="Images/sliderr3.png" alt="Nature Image 2">
+      </div>
+      <div class="carousel-item">
+        <img src="Images/healthimg.jpg" alt="Nature Image 3">
       </div>
     </div>
-  </section>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
 
-  <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-    const totalSlides = slides.length;
+   <!-- PRODUCT -->
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Top Rated Products</h2>
+    <div id="topRatedProductsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        
+        <div class="carousel-item active">
+          <div class="row">
+            
+            <div class="col-md-4"><div class="item-card"><img src="Images/product1.jpg" alt="Organic Honey"><h5>Organic Honey</h5><button class="vote-button" onclick="toggleLove(this)">&hearts;</button></div></div>
+            <div class="col-md-4"><div class="item-card"><img src="Images/product2.jpg" alt="Green Tea"><h5>Green Tea</h5><button class="vote-button" onclick="toggleLove(this)">&hearts;</button></div></div>
+            <div class="col-md-4"><div class="item-card"><img src="Images/product3.jpg" alt="Herbal Shampoo"><h5>Herbal Shampoo</h5><button class="vote-button" onclick="toggleLove(this)">&hearts;</button></div></div>
+          </div>
+        </div>
+        
 
-    function nextSlide() {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % totalSlides;
-      slides[currentSlide].classList.add('active');
-    }
-
-    setInterval(nextSlide, 2000);
-  </script>
-
-  <!-- Product Section -->
-  <section class="product-section container py-5">
-    <h2>Our Products</h2>
-    <div class="row">
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="product-card">
-          <img src="Images/product1.jpg" alt="Product 1">
-          <h3>Product 1</h3>
-          <p>Description of Product 1</p>
-          <button class="add-to-cart">Add to Cart</button>
-          <a href="product_page.html" class="view-more">View More</a>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4"><div class="item-card"><img src="Images/6bea7f91c82dec4d8b81c965551a555f.jpg" alt="Natural Oil"><h5>Natural Oil</h5><button class="vote-button" onclick="toggleLove(this)">&hearts;</button></div></div>
+            <div class="col-md-4"><div class="item-card"><img src="Images/nutrition.png" alt="Organic Coffee"><h5>Organic Coffee</h5><button class="vote-button" onclick="toggleLove(this)">&hearts;</button></div></div>
+            <div class="col-md-4"><div class="item-card"><img src="Images/product1.jpg" alt="Healthy Snacks"><h5>Healthy Snacks</h5><button class="vote-button" onclick="toggleLove(this)">&hearts;</button></div></div>
+          </div>
         </div>
       </div>
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="product-card">
-          <img src="Images/product1.jpg" alt="Product 2">
-          <h3>Product 2</h3>
-          <p>Description of Product 2</p>
-          <button class="add-to-cart">Add to Cart</button>
-          <a href="product_page.html" class="view-more">View More</a>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="product-card">
-          <img src="Images/product1.jpg" alt="Product 3">
-          <h3>Product 3</h3>
-          <p>Description of Product 3</p>
-          <button class="add-to-cart">Add to Cart</button>
-          <a href="product_page.html" class="view-more">View More</a>
-        </div>
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#topRatedProductsCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+      <button class="carousel-control-next" type="button" data-bs-target="#topRatedProductsCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
     </div>
-  </section>
+    <div class="view-more-btn">
+      <a href="product.html" class="btn btn-success btn-lg">View More Products</a>
+    </div>
+  </div>
 
-  <!-- Footer -->
-<footer style="background-color: #28a73b;" class="text-white py-5">
-  <div class="container">
-    <div class="row">
-    
-      <div class="col-md-4 text-center mb-3">
-        <img src="Images/nutrition.png" alt="Healthy Habitat Logo" width="100" class="mb-3">
+  <!-- SERVICES -->
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Top Rated Services</h2>
+    <div id="topRatedServicesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        
+
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-4"><div class="item-card"><img src="Images/service1.jpg" alt="Health Consultation"><h5>Health Consultation</h5><button class="vote-button" onclick="toggleLove(this)">&hearts;</button></div></div>
+            <div class="col-md-4"><div class="item-card"><img src="Images/Wellness Coaching.jpg" alt="Wellness Coaching"><h5>Wellness Coaching</h5><button class="vote-button" onclick="toggleLove(this)">&hearts;</button></div></div>
+            <div class="col-md-4"><div class="item-card"><img src="Images/yoga.jpg" alt="Yoga Classes"><h5>Yoga Classes</h5><button class="vote-button" onclick="toggleLove(this)">&hearts;</button></div></div>
+          </div>
+        </div>
+  
+
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4"><div class="item-card"><img src="Images/Nutrition Counseling.jfif" alt="Nutrition Counseling"><h5>Nutrition Counseling</h5><button class="vote-button" onclick="toggleLove(this)">&hearts;</button></div></div>
+            <div class="col-md-4"><div class="item-card"><img src="Images/nutrition.png" alt="Personal Training"><h5>Personal Training</h5><button class="vote-button" onclick="toggleLove(this)">&hearts;</button></div></div>
+            <div class="col-md-4"><div class="item-card"><img src="Images/detox.jpg" alt="Detox Programs"><h5>Detox Programs</h5><button class="vote-button" onclick="toggleLove(this)">&hearts;</button></div></div>
+          </div>
+        </div>
       </div>
-      
-      <div class="col-md-4">
-        <h5>About Us</h5>
-        <p>Healthy Habitat Network promotes sustainable living.</p>
-      </div>
-      
-      <div class="col-md-4">
-        <h5>Follow Us</h5>
-        <ul class="list-unstyled">
-          <li><a href="#" class="text-white"><i class="fab fa-facebook-square"></i> Facebook</a></li>
-          <li><a href="#" class="text-white"><i class="fab fa-twitter"></i> Twitter</a></li>
-          <li><a href="#" class="text-white"><i class="fab fa-instagram"></i> Instagram</a></li>
-        </ul>
+      <button class="carousel-control-prev" type="button" data-bs-target="#topRatedServicesCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+      <button class="carousel-control-next" type="button" data-bs-target="#topRatedServicesCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+    </div>
+    <div class="view-more-btn">
+      <a href="service.html" class="btn btn-success btn-lg">View More Services</a>
+    </div>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <div class="about-us">
+    <div class="container">
+      <h2 class="text-center">About Healthy Habitat Network</h2>
+      <div class="row align-items-center mt-4">
+        <div class="col-lg-6">
+          <p>Healthy Habitat Network is committed to providing top-notch products that support a healthier lifestyle. We offer a wide range of organic, eco-friendly, and health-conscious items. Our mission is to promote sustainability and quality in every product we offer, ensuring that our customers get the best in health and wellness.</p>
+        </div>
+        <div class="col-lg-6">
+          <img src="Images/nutrition.png" alt="About Us Image">
+        </div>
       </div>
     </div>
   </div>
-</footer>
+
+  <!-- SOCIAL MEDIA SECTION -->
+  <div class="social-media">
+    <h3>Follow Us On Social Media</h3>
+    <div class="social-icons mt-3">
+      <a href="https://www.facebook.com/HealthyHabitat" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="https://twitter.com/HealthyHabitat" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="https://www.instagram.com/HealthyHabitat" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="https://www.linkedin.com/company/HealthyHabitat" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>Healthy Habitat Network &copy; 2025</p>
+    </div>
+  </footer>
+
+  
+  <script>
+    function toggleLove(button) {
+      button.classList.toggle('loved');
+    }
+  </script>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
-
-<!-- Healthy-Habitat-Network-dummy-->

@@ -8,96 +8,92 @@
   <style>
     body {
         margin-top: 45px;
-      }
-      .navbar-brand img {
+    }
+    .navbar-brand img {
         width: 70px; /* Adjusted size */
         margin-right: 8px;
-      }
-      .navbar-custom {
+    }
+    .navbar-custom {
         background-color: #28a73b;
         padding: 8px 6px;
-      }
-      .navbar-nav {
+    }
+    .navbar-nav {
         margin-left: 0px;
-      }
-  
-      .navbar-brand {
+    }
+
+    .navbar-brand {
         margin-right: 20px;
-      }
-  
-      .navbar .navbar-nav .nav-link {
+    }
+
+    .navbar .navbar-nav .nav-link {
         font-size: 20px;
         padding: 4px 7px;
         font-weight: bold;
         color: white;
-      }
-  
-      .navbar-toggler {
+    }
+
+    .navbar-toggler {
         border-color: rgba(255, 255, 255, 0.1);
         padding: 5px 7px;
-      }
-  
-      .navbar-toggler-icon {
+    }
+
+    .navbar-toggler-icon {
         background-color: white;
         height: 20px;
         width: 30px;
-      }
+    }
     .product-card {
-      margin-bottom: 30px;
-      padding: 15px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-      text-align: center;
+        margin-bottom: 30px;
+        padding: 15px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        text-align: center;
     }
 
     .product-card:hover {
-      transform: scale(1.05);
+        transform: scale(1.05);
     }
 
     .product-card img {
-      width: 100%;
-      height: auto;
+        width: 100%;
+        height: auto;
     }
 
     .sort-options {
-      margin-bottom: 30px;
+        margin-bottom: 30px;
     }
 
     .add-to-cart {
-      background-color: #28a745;
-      color: white;
-      padding: 10px;
-      border: none;
-      cursor: pointer;
-      margin-top: 10px;
+        background-color: #28a745;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
     }
 
     .add-to-cart:hover {
-      background-color: #218838;
+        background-color: #218838;
     }
     footer {
-      background-color: #28a73b;
-      color: white;
-      text-align: center;
-      padding: 15px 0;
+        background-color: #28a73b;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
     }
   </style>
 </head>
 <body>
-     <!-- Navbar -->
+  
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
     <div class="container-fluid">
-      <!-- Logo and Brand -->
       <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="Images/nutrition.png" alt="Logo"> Healthy Habitat
       </a>
-      <!-- Toggler Button for Mobile -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- Navbar Links -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <!-- Left-Aligned Links -->
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Homepage</a>
@@ -112,7 +108,6 @@
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
         </ul>
-        <!-- Right-Aligned Links -->
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link" href="cart.html">Cart</a>
@@ -134,7 +129,6 @@
     <h2>Our Products</h2>
     <p>Explore eco-friendly and sustainable products tailored for a healthier lifestyle.</p>
 
-    <!-- Filters Section -->
     <div class="row sort-options">
       <div class="col-md-6">
         <label for="sort-voting">Sort by Voting:</label>
@@ -152,9 +146,8 @@
       </div>
     </div>
 
-    <!-- Products Grid -->
     <div class="row">
-      <!-- Product 1 -->
+      
       <div class="col-md-4">
         <div class="product-card">
           <img src="Images/product1.jpg" alt="Product 1">
@@ -162,11 +155,14 @@
           <p>Description of Product 1.</p>
           <p><strong>Price: $25.99</strong></p>
           <p><strong>Votes: 120</strong></p>
+          <p><strong>Area: London</strong></p>
+          <p><strong>Company: Company A</strong></p>
+          <p><strong>Rating: 4.5/5</strong></p>
           <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
+
       
-      <!-- Product 2 -->
       <div class="col-md-4">
         <div class="product-card">
           <img src="Images/product2.jpg" alt="Product 2">
@@ -174,11 +170,14 @@
           <p>Description of Product 2.</p>
           <p><strong>Price: $30.99</strong></p>
           <p><strong>Votes: 80</strong></p>
+          <p><strong>Area: Manchester</strong></p>
+          <p><strong>Company: Company B</strong></p>
+          <p><strong>Rating: 4.5/5</strong></p>
           <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
 
-      <!-- Product 3 -->
+      
       <div class="col-md-4">
         <div class="product-card">
           <img src="Images/product3.jpg" alt="Product 3">
@@ -186,71 +185,112 @@
           <p>Description of Product 3.</p>
           <p><strong>Price: $40.99</strong></p>
           <p><strong>Votes: 200</strong></p>
+          <p><strong>Area: Birmingham</strong></p>
+          <p><strong>Company: Company C</strong></p>
+          <p><strong>Rating: 4.5/5</strong></p>
           <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
 
-      <!-- Product 4 -->
+      
       <div class="col-md-4">
         <div class="product-card">
-          <img src="Images/product2.jpg" alt="Product 4">
+          <img src="Images/product4.jpg" alt="Product 4">
           <h3>Product 4</h3>
           <p>Description of Product 4.</p>
-          <p><strong>Price: $19.99</strong></p>
-          <p><strong>Votes: 50</strong></p>
+          <p><strong>Price: $50.99</strong></p>
+          <p><strong>Votes: 150</strong></p>
+          <p><strong>Area: Leeds</strong></p>
+          <p><strong>Company: Company D</strong></p>
+          <p><strong>Rating: 4.5/5</strong></p>
           <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
 
-      <!-- Product 5 -->
+      
       <div class="col-md-4">
         <div class="product-card">
-          <img src="Images/product3.jpg" alt="Product 5">
+          <img src="Images/product5.jpg" alt="Product 5">
           <h3>Product 5</h3>
           <p>Description of Product 5.</p>
-          <p><strong>Price: $22.99</strong></p>
-          <p><strong>Votes: 150</strong></p>
+          <p><strong>Price: $35.99</strong></p>
+          <p><strong>Votes: 100</strong></p>
+          <p><strong>Area: Glasgow</strong></p>
+          <p><strong>Company: Company E</strong></p>
+          <p><strong>Rating: 4.5/5</strong></p>
           <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
 
-      <!-- Product 6 -->
+      
       <div class="col-md-4">
         <div class="product-card">
-          <img src="Images/product2.jpg" alt="Product 6">
+          <img src="Images/product6.jpg" alt="Product 6">
           <h3>Product 6</h3>
           <p>Description of Product 6.</p>
-          <p><strong>Price: $35.99</strong></p>
-          <p><strong>Votes: 95</strong></p>
+          <p><strong>Price: $60.99</strong></p>
+          <p><strong>Votes: 180</strong></p>
+          <p><strong>Area: Oxford</strong></p>
+          <p><strong>Company: Company F</strong></p>
+          <p><strong>Rating: 4.5/5</strong></p>
           <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
+
+    
+      <div class="col-md-4">
+        <div class="product-card">
+          <img src="Images/product7.jpg" alt="Product 7">
+          <h3>Product 7</h3>
+          <p>Description of Product 7.</p>
+          <p><strong>Price: $45.99</strong></p>
+          <p><strong>Votes: 160</strong></p>
+          <p><strong>Area: Bristol</strong></p>
+          <p><strong>Company: Company G</strong></p>
+          <p><strong>Rating: 4.5/5</strong></p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+
+      <div class="col-md-4">
+        <div class="product-card">
+          <img src="Images/product8.jpg" alt="Product 8">
+          <h3>Product 8</h3>
+          <p>Description of Product 8.</p>
+          <p><strong>Price: $55.99</strong></p>
+          <p><strong>Votes: 110</strong></p>
+          <p><strong>Area: Cardiff</strong></p>
+          <p><strong>Company: Company H</strong></p>
+          <p><strong>Rating: 4.5/5</strong></p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      
+      <div class="col-md-4">
+        <div class="product-card">
+          <img src="Images/product9.jpg" alt="Product 9">
+          <h3>Product 9</h3>
+          <p>Description of Product 9.</p>
+          <p><strong>Price: $39.99</strong></p>
+          <p><strong>Votes: 210</strong></p>
+          <p><strong>Area: Edinburgh</strong></p>
+          <p><strong>Company: Company I</strong></p>
+          <p><strong>Rating: 4.5/5</strong></p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <script>
-    // Event listeners for sorting filters
-    document.getElementById('sort-voting').addEventListener('change', function() {
-      const value = this.value;
-      console.log('Sorted by voting:', value);
-      // Implement sorting functionality here
-    });
-
-    document.getElementById('sort-business').addEventListener('change', function() {
-      const value = this.value;
-      console.log('Sorted by business name:', value);
-      // Implement sorting functionality here
-    });
-    
-  </script>
-  <!-- Footer -->
   <footer>
     <div class="container">
       <p>Healthy Habitat Network &copy; 2025</p>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

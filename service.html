@@ -48,6 +48,7 @@
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
       text-align: center;
+      
     }
 
     .service-card:hover {
@@ -56,8 +57,11 @@
 
     .service-card img {
       width: 100%;
-      height: auto;
+      height: 250px;  /* Set a fixed height for all images */
+      object-fit: cover;  /* Ensures images cover the area without distorting */
     }
+    
+   
 
     .sort-options {
       margin-bottom: 30px;
@@ -83,42 +87,25 @@
   </style>
 </head>
 <body>
-     <!-- Navbar -->
+  
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
     <div class="container-fluid">
-      <!-- Logo and Brand -->
       <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="Images/nutrition.png" alt="Logo"> Healthy Habitat
       </a>
-      <!-- Toggler Button for Mobile -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- Navbar Links -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <!-- Left-Aligned Links -->
         <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Homepage</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="product.html">Product</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="service.html">Service</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Homepage</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
-        <!-- Right-Aligned Links -->
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="cart.html">Cart</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
           <li class="nav-item">
             <a class="nav-link" href="account.html">
               <img src="Images/Sample_User_Icon.png" alt="Account" style="width: 30px; height: auto;">
@@ -133,7 +120,7 @@
     <h2>Our Services</h2>
     <p>Discover a range of services to promote well-being and sustainability.</p>
 
-    <!-- Filters Section -->
+  
     <div class="row sort-options">
       <div class="col-md-6">
         <label for="sort-rating">Sort by Top Rating:</label>
@@ -144,13 +131,17 @@
       </div>
     </div>
 
-    <!-- Services Grid -->
+    
     <div class="row">
       <!-- Service 1 -->
       <div class="col-md-4">
         <div class="service-card">
           <img src="Images/service1.jpg" alt="Service 1">
-          <h3>Service 1</h3>
+          <h3>Health Consultation</h3>
+          <p><strong>Price:</strong> $50</p>
+          <p><strong>Votes:</strong> 250</p>
+          <p><strong>Area:</strong> London</p>
+          <p><strong>Company:</strong> GreenTech</p>
           <p>Description of Service 1.</p>
           <p><strong>Rating: 4.5/5</strong></p>
           <a href="service-details.html" class="read-more">Read More</a>
@@ -160,8 +151,12 @@
       <!-- Service 2 -->
       <div class="col-md-4">
         <div class="service-card">
-          <img src="Images/service1.jpg" alt="Service 2">
-          <h3>Service 2</h3>
+          <img src="Images/Wellness Coaching.jpg" alt="Service 2">
+          <h3>Wellness Coaching</h3>
+          <p><strong>Price:</strong> $45</p>
+          <p><strong>Votes:</strong> 180</p>
+          <p><strong>Area:</strong> Manchester</p>
+          <p><strong>Company:</strong> HealthPlus</p>
           <p>Description of Service 2.</p>
           <p><strong>Rating: 3.8/5</strong></p>
           <a href="service-details.html" class="read-more">Read More</a>
@@ -171,8 +166,12 @@
       <!-- Service 3 -->
       <div class="col-md-4">
         <div class="service-card">
-          <img src="Images/service1.jpg" alt="Service 3">
-          <h3>Service 3</h3>
+          <img src="Images/yoga.jpg" alt="Service 3">
+          <h3>Yoga Classes</h3>
+          <p><strong>Price:</strong> $40</p>
+          <p><strong>Votes:</strong> 320</p>
+          <p><strong>Area:</strong> Birmingham</p>
+          <p><strong>Company:</strong> EcoLife</p>
           <p>Description of Service 3.</p>
           <p><strong>Rating: 4.9/5</strong></p>
           <a href="service-details.html" class="read-more">Read More</a>
@@ -182,8 +181,12 @@
       <!-- Service 4 -->
       <div class="col-md-4">
         <div class="service-card">
-          <img src="Images/service1.jpg" alt="Service 4">
-          <h3>Service 4</h3>
+          <img src="Images/detox.jpg" alt="Service 4">
+          <h3>Detox Programs</h3>
+          <p><strong>Price:</strong> $20</p>
+          <p><strong>Votes:</strong> 150</p>
+          <p><strong>Area:</strong> Leeds</p>
+          <p><strong>Company:</strong> Green Solutions</p>
           <p>Description of Service 4.</p>
           <p><strong>Rating: 4.2/5</strong></p>
           <a href="service-details.html" class="read-more">Read More</a>
@@ -193,8 +196,12 @@
       <!-- Service 5 -->
       <div class="col-md-4">
         <div class="service-card">
-          <img src="Images/service1.jpg" alt="Service 5">
-          <h3>Service 5</h3>
+          <img src="Images/Nutrition Counseling.jfif" alt="Service 5">
+          <h3>Nutrition Counseling</h3>
+          <p><strong>Price:</strong> $40</p>
+          <p><strong>Votes:</strong> 210</p>
+          <p><strong>Area:</strong> Glasgow</p>
+          <p><strong>Company:</strong> NatureCare</p>
           <p>Description of Service 5.</p>
           <p><strong>Rating: 4.7/5</strong></p>
           <a href="service-details.html" class="read-more">Read More</a>
@@ -204,33 +211,73 @@
       <!-- Service 6 -->
       <div class="col-md-4">
         <div class="service-card">
-          <img src="Images/service1.jpg" alt="Service 6">
-          <h3>Service 6</h3>
+          <img src="Images/nutrition.png" alt="Service 6">
+          <h3>Personal Training</h3>
+          <p><strong>Price:</strong> $55</p>
+          <p><strong>Votes:</strong> 180</p>
+          <p><strong>Area:</strong> Liverpool</p>
+          <p><strong>Company:</strong> Clean Earth</p>
           <p>Description of Service 6.</p>
           <p><strong>Rating: 3.9/5</strong></p>
           <a href="service-details.html" class="read-more">Read More</a>
         </div>
       </div>
+
+      <!-- Service 7 -->
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="Images/service7.jpg" alt="Service 7">
+          <h3>Service 7</h3>
+          <p><strong>Price:</strong> $30</p>
+          <p><strong>Votes:</strong> 210</p>
+          <p><strong>Area:</strong> Bristol</p>
+          <p><strong>Company:</strong> HealthFirst</p>
+          <p>Description of Service 7.</p>
+          <p><strong>Rating: 4.3/5</strong></p>
+          <a href="service-details.html" class="read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Service 8 -->
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="Images/service8.jpg" alt="Service 8">
+          <h3>Service 8</h3>
+          <p><strong>Price:</strong> $20</p>
+          <p><strong>Votes:</strong> 170</p>
+          <p><strong>Area:</strong> Sheffield</p>
+          <p><strong>Company:</strong> GreenTech</p>
+          <p>Description of Service 8.</p>
+          <p><strong>Rating: 4.6/5</strong></p>
+          <a href="service-details.html" class="read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Service 9 -->
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="Images/service9.jpg" alt="Service 9">
+          <h3>Service 9</h3>
+          <p><strong>Price:</strong> $25</p>
+          <p><strong>Votes:</strong> 200</p>
+          <p><strong>Area:</strong> Edinburgh</p>
+          <p><strong>Company:</strong> EcoLiving</p>
+          <p>Description of Service 9.</p>
+          <p><strong>Rating: 4.8/5</strong></p>
+          <a href="service-details.html" class="read-more">Read More</a>
+        </div>
+      </div>
+
+    
     </div>
   </section>
 
-  <script>
-    // Event listeners for sorting filters
-    document.getElementById('sort-rating').addEventListener('change', function() {
-      const value = this.value;
-      console.log('Sorted by rating:', value);
-      // Implement sorting functionality here
-    });
-  </script>
-  <!-- Footer -->
   <footer>
     <div class="container">
       <p>Healthy Habitat Network &copy; 2025</p>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
